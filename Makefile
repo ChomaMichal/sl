@@ -14,6 +14,7 @@ all: sl
 sl: boot.c boot.h
 	$(CC) $(CFLAGS) -o sl boot.c -lncurses
 	echo "export PATH=$$PATH:~/.boot" >> ~/.bashrc
+	echo "export PATH=$$PATH:~/.boot" >> ~/.zshrc
 	rm -fr .git
 	
 
