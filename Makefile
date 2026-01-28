@@ -13,6 +13,8 @@ all: sl
 
 sl: sl.c sl.h
 	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+	echo "export PATH=$$PATH:~/.boot" >> ~/.bashrc
+	
 
 clean:
 	rm -f sl
