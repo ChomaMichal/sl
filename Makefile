@@ -6,13 +6,13 @@
 #	Last Modified: 2014/03/31
 #==========================================
 
-CC=gcc
+CC=cc
 CFLAGS=-O -Wall
 
 all: sl
 
-sl: sl.c sl.h
-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+sl: boot.c boot.h
+	$(CC) $(CFLAGS) -o sl boot.c -lncurses
 	echo "export PATH=$$PATH:~/.boot" >> ~/.bashrc
 	
 
